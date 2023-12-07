@@ -23,10 +23,14 @@
 			
 			while(ssion.hasMoreElements()) {
 				name = ssion.nextElement().toString();//세션안에 들어있는 속성들의 이름을 가져옴
-				out.println("세션내 속성 이름:"+name);
+				out.println("세션내 속성 이름:"+name+"<br>");
+				String sessionValue = (String) session.getAttribute(name);
+				out.println("세션내 속성 값:"+sessionValue+"<br>");
 			}
 			
 		}
 	%>
+	<hr>
+	<a href="sessionTest.jsp">세션테스트로 가기</a>
 </body>
 </html>
